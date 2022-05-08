@@ -16,6 +16,7 @@ options.addEventListener('click',() =>{
     updateHashes();    
     getValue();
     updateHashes();
+})
     
 
 generteButton.addEventListener('click',() =>{
