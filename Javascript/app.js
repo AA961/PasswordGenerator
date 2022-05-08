@@ -10,10 +10,11 @@ let selectHash = document.querySelector('.chose-hash')
 
 function getValue(){
     window.optionsValue = document.getElementById('hash-menu').value;
+    updateHashes();
 }
 
 selectHash.addEventListener('click',() =>{
-    getValue();
+    getValue().
     updateHashes();
 })
 options.addEventListener('click',() =>{
@@ -86,22 +87,29 @@ function copyHash(){
 }
 
 function updateHashes(){
-    if((window.optionsValue) == "sha256"){
+
+    let HashesValues = (window.optionsValue)
+    let HashesValue = HashesValues.split('"').join('');
+
+    if((HashesValues) == "sha256"){
         hashOutput.value = CryptoJS.SHA256(finalpass.value)
-    }else if((window.optionsValue) == "md5"){
+    }else if((HashesValues) == "md5"){
         hashOutput.value = CryptoJS.MD5(finalpass.value)
-    }else if ((window.optionsValue) == "sha1"){
+    }else if ((HashesValues) == "sha1"){
         hashOutput.value = CryptoJS.SHA1(finalpass.value)
-    }else if ((window.optionsValue) == "sha224"){
+    }else if ((HashesValues) == "sha224"){
         hashOutput.value = CryptoJS.SHA224(finalpass.value)
-    }else if ((window.optionsValue) == "sha512"){
+    }else if ((HashesValues) == "sha512"){
         hashOutput.value = CryptoJS.SHA512(finalpass.value)
-    }else if ((window.optionsValue) == "sha384"){
+    }else if ((HashesValues) == "sha384"){
         hashOutput.value = CryptoJS.SHA384(finalpass.value)
-    }else if ((window.optionsValue) == "sha3") {
+    }else if ((HashesValues) == "sha3") {
         hashOutput.value = CryptoJS.SHA3(finalpass.value)
-    }else if ((window.optionsValue) == "ripemd160"){
+    }else if ((HashesValues) == "ripemd160"){
         hashOutput.value = CryptoJS.RIPEMD160(finalpass.value)
     }
+    
+    // console.log(HashesValue)
+    // hashOutput.value = CryptoJS.HashesV(finalpass.value)
 }
 

@@ -10,7 +10,7 @@ body
 {
     display: flex;
     justify-content: center;
-    height: 100vh;
+    /* height: 100vh; */
     align-items: center;
     background-color: blanchedalmond;
 }
@@ -27,6 +27,7 @@ body
 h2
 {
     margin: 2rem;
+    margin-top: 5rem;
     padding: 1rem 2rem;
     background-color: wheat;
     border-radius: 12px;
@@ -226,5 +227,8 @@ h2
     }
 }
 
+/* @media(max-width:376px){
+    {
 
-/* <a href="https://www.flaticon.com/free-icons/hash" title="hash icons">Hash icons created by Freepik - Flaticon</a> */
+    } */
+
