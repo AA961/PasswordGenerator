@@ -13,7 +13,7 @@ function getValue(){
 }
 
 options.addEventListener('click',() =>{
-    options.addEventListener('click',(){
+    options.addEventListener('click',() =>{
         getValue();
     updateHashes();
 })
