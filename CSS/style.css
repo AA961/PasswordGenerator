@@ -2,6 +2,9 @@
 {
    margin: 0;padding: 0;
    box-sizing: border-box; 
+    --small : rgb(126, 80, 7);
+    --primary : rgb(231, 135, 8);
+    --background : wheat;
 }
 body
 {
@@ -83,7 +86,7 @@ h2
     color: rgb(241, 206, 109);
     border-radius: 30px;
 }
-.output
+.outputs
 {
     padding: 1rem;
     font-size: 2rem;
@@ -136,8 +139,56 @@ h2
     right: 7%;
     transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
-.alert-container.active{
+.alert-container.active
+{
     transform: translateX(150%);
+}
+
+.hash-copy
+{
+    position: absolute;
+    transform: translateX(-125px) translateY(205px);
+    padding: 1rem 2rem;
+    font-weight: 600;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color:burlywood;
+    color: rgb(126, 80, 7);
+    border-radius: 10px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.2s cubic-bezier(0.215, 0.610, 0.355, 1);
+}
+.hash-copy:hover{
+    color:burlywood;
+    background-color: rgb(126, 80, 7);
+}
+.chose-hash
+{
+    font-size: 1rem;
+    color: var(--small);
+    padding: 1rem;
+    margin-bottom: 2rem;
+}
+.chose-hash img
+{
+    width: 40px;
+    padding: 0.3rem;
+    margin-top: 1rem;
+    transform: translateY(15px);
+}
+#hash-menu
+{
+    font-size: 1.3rem;
+    padding: 0.7rem;
+    color: var(--primary);
+    background: var(--background);
+    outline: none;
+    border-radius: 12px;
+    text-transform: uppercase;
+}
+.hash-output
+{
+    margin: 2rem auto;
 }
 
 
@@ -157,9 +208,24 @@ h2
         transform: translateX(-75px) translateY(8px);
         font-weight: 600;
     }
+    .hashoutput-container{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .hash-copy{
+        position: relative;
+        transform: translateX(0px) translateY(0px);
+        text-align: center;
+    }
+
 }
 @media (min-width:992px){
     .container{
         max-width: 960px;
     }
 }
+
+
+/* <a href="https://www.flaticon.com/free-icons/hash" title="hash icons">Hash icons created by Freepik - Flaticon</a> */

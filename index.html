@@ -9,10 +9,10 @@
 </head>
 <body>
     <div class="container">
-        <h2>Random Password Generator</h2>
+        <h2>Password Generator With Hashes</h2>
         <div class="inputs">
             
-            <input class="output" type="text" placeholder="Create Password" id="input" readonly value="">
+            <input class="output outputs" type="text" placeholder="Create Password" id="input"  value="">
             <span class="btn-copy">Copy</span>
             <div class="len-input">
                 <small>Password Strength</small>
@@ -20,12 +20,29 @@
             </div>
         </div>
         <button class="btn generate">Generate</button>
+        <div class="hash">
+            <label for="slect-hashes" class="chose-hash">Chose<img src="hash.png" alt=""></label>
+            <select name="select-hash" id="hash-menu" onchange="getValue();">
+                <option value="md5">md5</option>
+                <option value="sha1">sha1</option>
+                <option value="sha256">sha256</option>
+                <option value="sha224">sha224</option>
+                <option value="sha512">sha512</option>
+                <option value="sha384">sha384</option>
+                <option value="sha3">sha3</option>
+                <option value="ripemd160">ripemd160</option>
+            </select>
+            <div class="hashoutput-container">
+                <textarea name="" id="hash-output" class="hash-output outputs" cols="20" rows="5" readonly></textarea>
+                <span class="hash-copy">Copy</span>
+            </div>
+        </div>
         <div class="alert-container active">
             Password Copied
         </div>
     
     </div>
-    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
     <script src="Javascript/app.js"></script>
 </body>
 </html>
