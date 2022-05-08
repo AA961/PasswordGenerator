@@ -13,11 +13,9 @@ function getValue(){
 }
 
 options.addEventListener('click',() =>{
-    options.addEventListener('click',() =>{
-        getValue();
+    updateHashes();    
+    getValue();
     updateHashes();
-})
-    })
     
 
 generteButton.addEventListener('click',() =>{
