@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Password Generator</title>
     <link rel="stylesheet" href="CSS/style.css">
+    <link rel="shortcut icon" href="Img/hash.png" type="image/x-icon">
 </head>
 <body>
     <div class="container">
@@ -13,7 +14,7 @@
         <div class="inputs">
             
             <input class="output outputs" type="text" placeholder="Create Password" id="input"  value="" readonly>
-            <span class="btn-copy">Copy</span>
+            <span class="btn-copy"> <img src="Img/copy.png" alt=""> </span>
             <div class="len-input">
                 <small>Password Strength</small>
                 <input type="range" max="17"  min="6" class="length" value="" placeholder="Enter Password Length">
@@ -21,7 +22,7 @@
         </div>
         <button class="btn generate">Generate</button>
         <div class="hash">
-            <label for="slect-hashes" class="chose-hash">Chose<img src="Img/hash.png" alt=""></label>
+            <label for="slect-hashes" class="chose-hash">Choose<img src="Img/hash.png" alt=""></label>
             <select name="select-hash" id="hash-menu" onchange="getValue();">
                 <option value="md5">MD5</option>
                 <option value="sha1">SHA-1</option>
@@ -34,7 +35,7 @@
             </select>
             <div class="hashoutput-container">
                 <textarea name="" id="hash-output" class="hash-output outputs" cols="20" rows="5" readonly></textarea>
-                <span class="hash-copy">Copy</span>
+                <span class="hash-copy"> <img src="Img/copy.png" alt=""></span>
             </div>
         </div>
         <div class="alert-container active">

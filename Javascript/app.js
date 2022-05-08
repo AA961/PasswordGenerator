@@ -59,7 +59,7 @@ copyButton.addEventListener('click',() =>{
     }
     setTimeout(() => {
         copyAlert.classList.add('active')
-    }, 2000);
+    }, 1300);
 });
 
 function copyPassword(){
@@ -75,7 +75,7 @@ hashCopyButton.addEventListener('click',() =>{
         copyAlert.innerHTML = "Hash Copied"
         setTimeout(() => {
             copyAlert.classList.add('active')
-        }, 2000);
+        }, 1300);
     }
 })
 
