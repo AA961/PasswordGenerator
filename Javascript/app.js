@@ -13,11 +13,9 @@ function getValue(){
 }
 
 options.addEventListener('click',() =>{
-    
+    getValue()
     getValue()
     updateHashes()
-            
-    
 })
 
 generteButton.addEventListener('click',() =>{
@@ -60,6 +58,7 @@ function copyPassword(){
     finalpass.setSelectionRange(0,9999);
     navigator.clipboard.writeText(finalpass.value);
 }
+
 hashCopyButton.addEventListener('click',() =>{
     copyHash();
     if (hashOutput.value){
