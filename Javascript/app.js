@@ -6,14 +6,18 @@ let passLenght = document.querySelector('.length')
 let hashOutput = document.querySelector('.hash-output')
 let hashCopyButton = document.querySelector('.hash-copy')
 let options = document.getElementById('hash-menu');
+let selectHash = document.querySelector('.chose-hash')
 
 function getValue(){
     window.optionsValue = document.getElementById('hash-menu').value;
-    // console.log(optionsValue)
 }
 
+selectHash.addEventListener('click',() =>{
+    getValue();
+    updateHashes();
+})
 options.addEventListener('click',() =>{
-    updateHashes();    
+    
     getValue();
     updateHashes();
 })
@@ -49,6 +53,8 @@ copyButton.addEventListener('click',() =>{
     if(finalpass.value){
         copyAlert.classList.remove('active')
         copyAlert.innerHTML = "Password Copied"
+        getValue()
+        updateHashes()
     }
     setTimeout(() => {
         copyAlert.classList.add('active')
