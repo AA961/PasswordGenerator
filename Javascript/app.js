@@ -13,14 +13,14 @@ function getValue(){
 }
 
 options.addEventListener('click',() =>{
-    getValue()
-    getValue()
-    updateHashes()
+    getValue();
+    updateHashes();
 })
 
 generteButton.addEventListener('click',() =>{
     
     createPassword();
+    getValue();
     updateHashes();
 })
 
