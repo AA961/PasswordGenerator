@@ -1,0 +1,165 @@
+*
+{
+   margin: 0;padding: 0;
+   box-sizing: border-box; 
+}
+body
+{
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    align-items: center;
+    background-color: blanchedalmond;
+}
+.container
+{   
+    max-width: 1152px;
+    padding: 0 15px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+h2
+{
+    margin: 2rem;
+    padding: 1rem 2rem;
+    background-color: wheat;
+    border-radius: 12px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: rgb(231, 135, 8);
+    text-align: center;
+    box-shadow: 0px 5px 15px;
+}
+.inputs
+{
+    position: relative;
+}
+.btn-copy
+{
+    position: absolute;
+    transform: translateX(-120px) translateY(8px);
+    padding: 1rem 2rem;
+    font-weight: 600;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color:burlywood;
+    color: rgb(126, 80, 7);
+    border-radius: 10px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.2s cubic-bezier(0.215, 0.610, 0.355, 1);
+}
+.btn-copy:hover{
+    color:burlywood;
+    background-color: rgb(126, 80, 7);
+}
+.len-input
+{
+    margin: 1rem;
+    display: inline-block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.len-input small{
+    font-size: small;
+    color: rgb(126, 80, 7);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.length
+{
+    padding: 0.3rem;
+    font-size: small;
+    width: 100%;
+    letter-spacing: normal;
+    color: rgb(70, 47, 17);
+    font-weight: 800;
+    outline: none;
+    border: none;
+    background-color: rgb(138, 98, 50);
+    color: rgb(241, 206, 109);
+    border-radius: 30px;
+}
+.output
+{
+    padding: 1rem;
+    font-size: 2rem;
+    outline: none;
+    border: none;
+    border-radius: 8px;
+    background-color: rgb(241, 206, 109);
+    cursor: not-allowed;
+    color: rgb(73, 51, 24);
+    letter-spacing: 0.3rem;
+    width: 100%;
+}
+.btn
+{
+    padding: 1rem 2rem;
+    color: wheat;
+    background-color: rgb(231, 135, 8);
+    outline: none;
+    border: none;
+    border-radius: 15px;
+    margin: 1rem auto;
+    font-size: 1rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 500;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.1s ease-in-out;
+    border: 1px transparent solid;
+
+}
+.btn:hover
+{
+    color: rgb(231, 135, 8);
+    background-color: transparent;
+    border: 1px rgb(231, 135, 8) solid;
+}
+.alert-container
+{
+    padding: 1rem 2rem;
+    position: fixed;
+    font-size: 1.3rem;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: rgb(63, 51, 35);
+    background-color: rgb(219, 209, 190);
+    box-shadow: 0px 10px 20px;
+    border-radius: 12px;
+    font-weight: 500;
+    border: wheat 2px solid;
+    bottom: 10%;
+    right: 7%;
+    transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.alert-container.active{
+    transform: translateX(150%);
+}
+
+
+@media (max-width: 576px){
+    .container
+    {
+        max-width: 540px;
+    }
+    .output
+    {
+        letter-spacing: normal;
+        padding: 1rem 0.4rem;
+    }
+    .btn-copy
+    {
+        padding: 1rem 0.7rem;
+        transform: translateX(-75px) translateY(8px);
+        font-weight: 600;
+    }
+}
+@media (min-width:992px){
+    .container{
+        max-width: 960px;
+    }
+}
