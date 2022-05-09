@@ -133,13 +133,13 @@ h2
     transform: translateX(150%);
 }
 
-.hash-copy
+/* .hash-copy
 {
     position: absolute;
-    transform: translateX(-50px) translateY(220px);
+    transform: translateX(-50px) translateY(20rem);
     cursor: pointer;
     transition: all 0.2s cubic-bezier(0.215, 0.610, 0.355, 1);
-}
+} */
 .chose-hash
 {
     font-size: 1rem;
@@ -167,6 +167,16 @@ h2
 .hash-output
 {
     margin: 2rem auto;
+    position: relative;
+}
+.hashoutput-container{
+    position: relative;
+}
+.hashoutput-container span {
+    position: absolute;
+    left: 90%;
+    top: 80%;
+    z-index: 1;
 }
 
 
@@ -183,15 +193,6 @@ h2
     .btn-copy
     {
         transform: translateX(-40px) translateY(21px);
-    }
-    .hashoutput-container{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-    }
-    .hash-copy{
-        transform: translateX(155px) translateY(90px);
     }
 
 }
